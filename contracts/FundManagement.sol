@@ -1,4 +1,5 @@
-// SPDX-License-Identifier: MIT
+// test
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
 import "openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol";
@@ -39,7 +40,7 @@ contract FundManagement is
         require(_allocation <= totalFunds);
         allocations[_beneficiary] += _allocation;
         totalFunds -= _allocation;
-        emit FundAllocated(_beneficiary, _allocation);
+        emit FundAllocated(_beneficiary, _allocation); 
     }
 
     function approveBeneficiary(address _beneficiary, bool _status)
