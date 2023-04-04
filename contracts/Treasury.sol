@@ -3,6 +3,8 @@ pragma solidity ^0.8.4;
 
 import "openzeppelin-contracts/contracts/access/Ownable.sol";
 
+//This is a boolean variable that will be used to pause the contract.
+bool public pause;
 
 /*
   By default, the owner of an Ownable contract is the account that deployed it.
@@ -22,10 +24,12 @@ contract Treasury is Ownable {
     // Function to withdraw Ether from the contract to specified address
     function withdraw(uint256 amount, address receiver) external onlyOwner {
         require(
+            pause == false, "Treasury: Contract is paused"
             address(receiver) != address(0),
             "Treasury: receiver is zero address"
         );
         require(
+            pause == false, "Treasury: Contract is paused"
             address(this).balance >= amount,
             "Treasury: Not enough balance to withdraw"
         );
@@ -38,17 +42,42 @@ contract Treasury is Ownable {
     // Function to allow the owner to withdraw the entire balance
     function withdrawAll() external onlyOwner {
         uint256 balance = address(this).balance;
-        require(balance > 0, "Treasury: No balance to withdraw");
+        require(
+            pause == false, "Treasury: Contract is paused"
+            balance > 0, "Treasury: No balance to withdraw"
+        );
 
 
         (bool send, ) = msg.sender.call{value: balance}("");
-        require(send, "To owner: Failed to send Ether");
+        require(
+            pause == false, "Treasury: Contract is paused"
+            send, "To owner: Failed to send Ether"
+        );
     }
 
 
     // Function to get the contract balance
     function getBalance() external view returns (uint256) {
         return address(this).balance;
+    }
+
+    //The next set of functions are to implement a pause function for the contract
+    //This is to prevent full visibility of the contract to the public and only
+    //allows certain functions to be called at a time
+
+    // Function to pause the contract
+    function pauseContract() external onlyOwner {
+        pause = true;
+    }
+
+    // Function to unpause the contract
+    function unpauseContract() external onlyOwner {
+        pause = false;
+    }
+
+    // Function to get the pause status of the contract
+    function getPauseStatus() external view returns (bool) {
+        return pause;
     }
 
     //This function create an escrow service which would get rid of the need 

@@ -1,17 +1,13 @@
-# README
+# Group Members
 
-A course at Chapman University Spring 2023 as a section of CPSC 298, the Computer Science Colloquium, which offers one credit courses (one lecture per week) on a current topic of interest. The title of this section is
+- Connor Jacobs (Created the Escrow Struct and Functions which gets rid of the need of malicious 3rd party services)
+- Eric Phan (Created a set of functions to create a pause between transactions in functions in order to add more security, Updated the ReadMe)
 
-## Introduction to Smart Contracts
+# Overall View of the Project
 
-(created by [Alexander Kurz](https://www.chapman.edu/our-faculty/alexander-kurz) and [Ronan Kearns](https://www.linkedin.com/in/ronank/) from Chapman and [Jeff Turner](https://www.linkedin.com/in/composedao/) and Steve Preston from ComposeDAO)
+The open source software project I will be trying to make is an NBA database site. This database will automatically read from live NBA games/streams which will automatically update statistics and scores for each and every member and team that will/have played within the current season. While the official NBA site has this already, what if you want to be able to manipulate or even read specific data? What if you want this displayed in a way where it is easily digestible? You would have to manually input all the data or statistics into your own separate data fields. Followed by calculating percentages or averages yourself which can be tedious (especially repeating this season after season). Just transferring the data itself is already a long, laborious process and even after that you would still need to perform the correct calculations in order to find the precise information that you require. What if there was a way to completely cut out the procedure of transferring data? By creating this manipulatable data, users are able to do whatsoever they would like with it. 
 
-**Lectures:** Feb 1 - May 10 in Keck 153, Wed 12-1pm. No classes March 22 (Spring break).  
-**Office Hours:** Keck Center - Swenson #N305 Huddle Space (I may have to let you in, send me an email).  
-
-The purpose of the course is to give a hands-on introduction in how to develop a dApp using smart contracts.
-
-- [Lecture by lecture](lectures/lecture-by-lecture.md)
+The mission/goal is to help users create a masterful team that will help them succeed in any fantasy basketball league of their choice. Users will be able to search up incredibly specific stats in order to learn from certain players and their talents as well as skillset. While of course some of it does come down to luck and how NBA players stay healthy, studying each player's skills can come in handy especially looking towards the long term. This could also be a way for coaches or even scouting staff to study how particular players operate on the floor so that teams can adjust to their playing style to accurately adjust to specific needs. Overall, this also allows for students or people interested in studying data analytics or statistics a chance to learn about a field in sports.
 
 ## Required Steps for Testing and Deployment
 
