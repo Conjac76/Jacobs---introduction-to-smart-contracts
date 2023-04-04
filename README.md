@@ -21,6 +21,8 @@ The mission/goal is to help users create a masterful team that will help them su
 
 - [ ] Make the Given Template Revolve Around our Idea
 
+# Other Information
+
 ## Required Steps for Testing and Deployment
 
 Install Foundry -> https://book.getfoundry.sh/getting-started/installation.html
