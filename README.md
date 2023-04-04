@@ -11,15 +11,15 @@ The mission/goal is to help users create a masterful team that will help them su
 
 # Goals and Plans for the Project
 
--[x] Add a Level of Security
+- [x] Add a Level of Security
 
--[x] Update Functionality of Original Template
+- [x] Update Functionality of Original Template
 
--[] Test The Project
+- [ ] Test The Project
 
--[] Deploy the Project
+- [ ] Deploy the Project
 
--[] Make the Given Template Revolve Around our Idea
+- [ ] Make the Given Template Revolve Around our Idea
 
 ## Required Steps for Testing and Deployment
 
