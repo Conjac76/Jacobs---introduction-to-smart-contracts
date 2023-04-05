@@ -3,13 +3,14 @@ pragma solidity ^0.8.4;
 
 import "openzeppelin-contracts/contracts/access/Ownable.sol";
 
-//This is a boolean variable that will be used to pause the contract.
-bool public pause;
-
 /*
   By default, the owner of an Ownable contract is the account that deployed it.
 */
 contract Treasury is Ownable {
+
+    //This is a boolean variable that will be used to pause the contract.
+    bool public pause;
+
     // Function to deposit Ether into the contract
     function deposit() external payable {
         require(
@@ -23,13 +24,13 @@ contract Treasury is Ownable {
 
     // Function to withdraw Ether from the contract to specified address
     function withdraw(uint256 amount, address receiver) external onlyOwner {
+        require(pause == false, "Treasury: Contract is paused");
         require(
-            pause == false, "Treasury: Contract is paused"
             address(receiver) != address(0),
             "Treasury: receiver is zero address"
         );
+        require(pause == false, "Treasury: Contract is paused");
         require(
-            pause == false, "Treasury: Contract is paused"
             address(this).balance >= amount,
             "Treasury: Not enough balance to withdraw"
         );
@@ -42,15 +43,15 @@ contract Treasury is Ownable {
     // Function to allow the owner to withdraw the entire balance
     function withdrawAll() external onlyOwner {
         uint256 balance = address(this).balance;
+        require(pause == false, "Treasury: Contract is paused");
         require(
-            pause == false, "Treasury: Contract is paused"
             balance > 0, "Treasury: No balance to withdraw"
         );
 
 
         (bool send, ) = msg.sender.call{value: balance}("");
+        require(pause == false, "Treasury: Contract is paused");
         require(
-            pause == false, "Treasury: Contract is paused"
             send, "To owner: Failed to send Ether"
         );
     }
