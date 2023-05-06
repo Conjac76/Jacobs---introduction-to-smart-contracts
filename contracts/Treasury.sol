@@ -108,7 +108,7 @@ contract Treasury is Ownable {
 
         Escrow storage escrow = escrows[index];
 
-        require(!(escrow.released, "Treasury: Escrow already released"));
+        require(!escrow.released, "Treasury: Escrow already released");
 
         (bool send, ) = escrow.payee.call{value: escrow.amount}("");
 
