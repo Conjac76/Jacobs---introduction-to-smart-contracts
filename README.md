@@ -15,11 +15,11 @@ The mission/goal is to help users create a masterful team that will help them su
 
 - [x] Update Functionality of Original Template
 
-- [ ] Test The Project
+- [x] Test The Project
 
-- [ ] Deploy the Project
+- [?] Deploy the Project
 
-- [ ] Make the Given Template Revolve Around our Idea
+- [x] Make the Given Template Revolve Around our Idea
 
 # Other Information
 
