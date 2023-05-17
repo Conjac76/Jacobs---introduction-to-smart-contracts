@@ -9,6 +9,10 @@ The open source software project I will be trying to make is an NBA database sit
 
 The mission/goal is to help users create a masterful team that will help them succeed in any fantasy basketball league of their choice. Users will be able to search up incredibly specific stats in order to learn from certain players and their talents as well as skillset. While of course some of it does come down to luck and how NBA players stay healthy, studying each player's skills can come in handy especially looking towards the long term. This could also be a way for coaches or even scouting staff to study how particular players operate on the floor so that teams can adjust to their playing style to accurately adjust to specific needs. Overall, this also allows for students or people interested in studying data analytics or statistics a chance to learn about a field in sports.
 
+
+# Instructions
+Run the code through the Remix Merge VM
+
 # Goals and Plans for the Project
 
 - [x] Add a Level of Security
